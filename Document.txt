@@ -1,0 +1,9 @@
+.\venv\Scripts\activate && python manage.py runserver
+python -m venv .\venv
+pip install django
+django-admin startproject physics .
+python manage.py makemigration
+python manage.py startapp accounts
+python manage.py migrate
+python manage.py collectstatic
+python manage.py runserver

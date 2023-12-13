@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="my-form container p-5 my-5 rounded border border-warning">
+    <form>
+        <h2 class="text-center">Wellcome {{user.username}}</h2>
+        <hr>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputFirstName">First Name: {{user.first_name}} </label>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputLastName">Last Name: {{user.last_name}}</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">Email: {{user.email}}</label>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+{% endblock content %}

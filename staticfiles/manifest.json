@@ -1,0 +1,35 @@
+{  
+  "name": "Your App Name",
+    "short_name": "ShortName",
+    "description": "A brief description of your app",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB",
+    "icons": [
+      {
+        "src": "img/1.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "img/2.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+
+      {
+        "src": "img/mas.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+
+    ],
+    "offline_access": true,
+    "scope": "/",
+    "serviceworker": {
+      "src": "static/js/sw.js"
+    }
+
+  }

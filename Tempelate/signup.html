@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for x in messages %}
+<h5>{{x}}</h5>
+{%endfor%}
+<div class="my-form container p-5 my-5 rounded border border-warning">
+    <form  method="POST"> {% csrf_token %}
+        <h2 class="text-center">Sign Up</h2>
+        <hr>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="inputFirstName">First Name</label>
+              <input type="text" class="form-control" id="inputFirstName" name="firstname"  required>
+          </div>
+          <div class="form-group col-md-6">
+              <label for="inputLastName">Last Name</label>
+              <input type="text" class="form-control" id="inputLastName" name="lastname"  required>
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputUsername">Username</label>
+                <input type="text" class="form-control" id="inputUsername"  name="username" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" name="password" required>
+            </div>
+        </div>
+        <div class="form-group ">
+          <label for="inputLastName">Email</label>
+          <input type="text" class="form-control" id="inputEmail" name="email" required>
+      </div>
+        <button type="submit" class="btn btn-warning col-md ">Sign Up</button>
+    </form>
+
+</div>
+
+
+
+
+{% endblock content %}
